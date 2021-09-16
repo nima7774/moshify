@@ -180,6 +180,7 @@ a{
     cursor: pointer;
     font-size-adjust: 1.8rem;
     font-weight: 600;
+    outline: 0;
     padding:2rem 3rem;
     text-transform:uppercase;
     white-space:nowrap;
@@ -187,7 +188,12 @@ a{
     text-align:center;
     margin:1rem 0;
 }
-
+.btn .icon{
+    width:2rem;
+    height:2rem;
+    margin-right: 1rem;
+    vertical-align:middle;
+}
 .btn--primary{
     background-color:var(--color-primary);
     color:#fff;
@@ -271,7 +277,7 @@ a{
 .input-group .input{
     border:0;
     flex-grow: 1;
-    padding:1.5rem 1rem;
+    padding:1.5rem 2rem;
 }
 .input-group .btn{
     margin:4px;
@@ -291,6 +297,10 @@ a{
     background-color:var(--color-primary);
     color:#fff;
     
+}
+.card--primary .badge--primary{
+    background-color:#126de4;
+
 }
 .card--secondary .badge--secondary{
     background-color:#02cdf1;
@@ -341,6 +351,17 @@ font-size: 2.4rem;
     right:5%;
 
 }
+.plan{
+    transition:transform .3s ease-out;
+}
+
+.plan:hover{
+    transform:scale(1.05);
+}
+.plan--popular:hover{
+    transform:scale(1.15);
+}
+
 @media screen and (min-width: 1024px){
     .plan__name{
         font-size:1.4rem;
@@ -427,6 +448,7 @@ content: open-quote;
 
 .grid{
     display:grid;
+    
 }
 @media screen and (min-width: 768px){
     .grid--cols-2{
@@ -435,7 +457,8 @@ content: open-quote;
 }
 @media screen and (min-width: 1024px){
     .grid--cols-3{
-      grid-template-columns:1fr 1fr 1fr;  
+      grid-template-columns:1fr 1fr 1fr;
+      
     }
 }
 
@@ -653,6 +676,79 @@ content: open-quote;
     }
     .hero{
         padding-top:0; 
+    }
+}
+/*  Domain block */
+
+.block-domain .input-group{
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border:0;
+    margin:4rem auto;
+    max-width:670px;
+
+}
+.domain-prices{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:2 6rem;
+    font-size:2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 700px;
+    margin:0 auto;
+
+}
+@media screen and (min-width: 768px){
+    .domain-prices{
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    }
+}
+
+/* plans block */
+
+.block-plans .grid{
+    gap:8rem 4rem;
+}
+
+.block-plans .card{
+    max-width:500px;
+    margin:0 auto;
+}
+
+.plan--popular{
+    transform:scale(1.1)
+}
+
+/* features */
+
+
+.feature__heading{
+
+    margin:1rem 0;
+
+
+}
+.feature{
+ gap: 4rem 2rem;
+ margin:8rem 0;
+}
+
+.feature:first-of-type{
+    margin-top: 4rem;
+}
+
+.feature__img{
+    width:100%;
+    max-width:500px;
+    max-height: 500px;
+    margin:0 auto;
+}
+
+@media screen and (min-width: 768px){
+
+    .feature:nth-of-type(odd) .feature__content{
+        order:1;
+
     }
 }
 
